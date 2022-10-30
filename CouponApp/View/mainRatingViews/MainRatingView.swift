@@ -70,7 +70,7 @@ struct MainRatingView: View {
             .padding(.vertical)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .sheet(isPresented: $showStatistics) {
-                // TODO: FKJ - Show statistics!
+                StatisticsView(viewModel: viewModel)
             }
             
             // Actions
