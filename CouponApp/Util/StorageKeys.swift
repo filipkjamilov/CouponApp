@@ -11,5 +11,7 @@ enum StorageKeys: String {
     case endReached
     case coupon
     case freshStart
+    case displayingContent
+    case ratedContent
     
 }

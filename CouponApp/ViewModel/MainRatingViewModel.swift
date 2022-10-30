@@ -8,8 +8,8 @@ import Combine
 
 public class MainRatingViewModel: ObservableObject {
     
-    @Published var displayingContent: [Content] = []
-    @Published var ratedContent: [Content] = []
+    @Published(key: StorageKeys.displayingContent.rawValue) var displayingContent: [Content] = []
+    @Published(key: StorageKeys.ratedContent.rawValue) var ratedContent: [Content] = []
     
     @AppStorage(StorageKeys.showPromoCode.rawValue) var showPromoCode = false
     @AppStorage(StorageKeys.endReached.rawValue) var endReached = false
@@ -104,6 +104,7 @@ public class MainRatingViewModel: ObservableObject {
     
     func appReset() {
         // Reset properties
+        UserDefaults.standard.reset()
         displayingContent = []
         ratedContent = []
         showPromoCode = false
