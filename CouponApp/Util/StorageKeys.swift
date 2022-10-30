@@ -4,6 +4,12 @@ import Foundation
 
 enum StorageKeys: String {
     
+    case start
+    case limit
     case currentPage
+    case showPromoCode
+    case endReached
+    case coupon
+    case freshStart
     
 }

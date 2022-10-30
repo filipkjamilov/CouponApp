@@ -9,7 +9,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            TutorialWalkthrough(totalPages: totalPages)
+            if currentPage > totalPages {
+                MainRatingView()
+            } else {
+                TutorialWalkthrough(totalPages: totalPages)
+            }
         }
     }
 }
