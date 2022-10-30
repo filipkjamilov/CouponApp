@@ -6,14 +6,13 @@ enum Rating: Codable {
     case unknown
     case liked
     case disliked
-    case skipped
 }
 
 struct Content: Codable {
     
     var id: Int
     var name: String
-    var imageURL: String
+    var imageName: String
     var downloadedImage: Data
     var rating: Rating = .unknown
     
@@ -22,15 +21,15 @@ struct Content: Codable {
     private enum CodingKeys: String, CodingKey {
         case id
         case name
-        case imageURL
+        case imageName
         case downloadedImage
         case rating
     }
     
-    init(id: Int, name: String, imageURL: String, downloadedImage: Data) {
+    init(id: Int, name: String, imageName: String, downloadedImage: Data) {
         self.id = id
         self.name = name
-        self.imageURL = imageURL
+        self.imageName = imageName
         self.downloadedImage = downloadedImage
     }
     
@@ -38,9 +37,38 @@ struct Content: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
-        imageURL = try values.decode(String.self, forKey: .imageURL)
+        imageName = try values.decode(String.self, forKey: .imageName)
         downloadedImage = try values.decode(Data.self, forKey: .downloadedImage)
         rating = try values.decode(Rating.self, forKey: .rating)
+    }
+    
+}
+
+struct ContentDto: Codable {
+    
+    var id: Int
+    var name: String
+    var imageName: String
+    
+    // MARK: -
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case imageName
+    }
+    
+    init(id: Int, name: String, imageName: String) {
+        self.id = id
+        self.name = name
+        self.imageName = imageName
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(Int.self, forKey: .id)
+        name = try values.decode(String.self, forKey: .name)
+        imageName = try values.decode(String.self, forKey: .imageName)
     }
     
 }

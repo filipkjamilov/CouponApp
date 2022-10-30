@@ -6,6 +6,8 @@ import FirebaseStorage
 import SwiftUI
 import Combine
 
+typealias ImageData = Data
+
 public class MainRatingViewModel: ObservableObject {
     
     @Published(key: StorageKeys.displayingContent.rawValue) var displayingContent: [Content] = []
@@ -39,52 +41,65 @@ public class MainRatingViewModel: ObservableObject {
     
     func fetchData() {
         
-        let database = databaseReference
+        let databaseQuery = getDatabaseQuery()
+        
+        databaseQuery.observeSingleEvent(of: .value) { snapshot in
+
+            if snapshot.childrenCount < self.limit { self.endReached = true }
+            guard let snapshot = snapshot.value as? [String: Any] else { return }
+
+            snapshot.forEach { content in
+                
+                guard let test = try? JSONSerialization.data(withJSONObject: content.value as Any, options: []) else { return }
+                
+                let dto: ContentDto
+                do {
+                    dto = try JSONDecoder().decode(ContentDto.self, from: test)
+                } catch {
+                    print("Decoding error!")
+                    return
+                }
+                
+                self.fetchImageData(with: dto.imageName) { imageData in
+                    DispatchQueue.main.async {
+                        // Append content to array!
+                        self.displayingContent.append(self.mapToContent(dto: dto, imageData: imageData))
+                    }
+                }
+
+            }
+        }
+    }
+    
+    func getDatabaseQuery() -> DatabaseQuery {
+        return databaseReference
             .child("content")
             .queryOrdered(byChild: "id")
             .queryStarting(atValue: start)
             .queryLimited(toFirst: UInt(limit))
+    }
+    
+    func mapToContent(dto: ContentDto, imageData: ImageData) -> Content {
+        return Content(id: dto.id,
+                       name: dto.name,
+                       imageName: dto.imageName,
+                       downloadedImage: imageData)
+    }
+    
+    func fetchImageData(with imageName: String, completion: @escaping (_ imageData: ImageData) -> () ) {
         
-        print("Fetching started from: ", start)
-        database.observeSingleEvent(of: .value) { snapshot in
-
-            if snapshot.childrenCount < self.limit { self.endReached = true }
+        self.storageReference.child("content/\(imageName)").downloadURL(completion: { url, error in
+            guard let url = url, error == nil else { return }
+            guard let imageLink = URL(string: url.absoluteString) else { return }
             
-            guard let snapshot = snapshot.value as? [String: Any] else { return }
-
-            snapshot.forEach { content in
-                let card = content.value as? [String: Any]
+            URLSession.shared.dataTask(with: imageLink, completionHandler: { data, _, error in
+                guard let data = data, error == nil else { return }
                 
-                // TODO: FKJ - Try to parse it as Content directly!
-                let id = card?["id"] as? Int ?? 0
-                let name = card?["name"] as? String ?? ""
-                let imageURL = card?["imageURL"] as? String ?? ""
-                let imageName = card?["imageName"] as? String ?? ""
+                completion(data)
                 
-                print("Content Name: ", id)
-                // Fetch the image from Storage.
-                // Do not add `Content` if image is not retreived from Storage!
-                
-                // TODO: FKJ - Try having this in other function!
-                self.storageReference.child("content/\(imageName)").downloadURL(completion: { url, error in
-                    guard let url = url, error == nil else { return }
-                    guard let imageLink = URL(string: url.absoluteString) else { return }
-                    
-                    URLSession.shared.dataTask(with: imageLink, completionHandler: { data, _, error in
-                        guard let data = data, error == nil else { return }
-                        
-                        DispatchQueue.main.async {
-                            // Append content to array!
-                            self.displayingContent.append(Content(id: id,
-                                                                  name: name,
-                                                                  imageURL: imageURL,
-                                                                  downloadedImage: data))
-                        }
-                        
-                    }).resume()
-                })
-            }
-        }
+            }).resume()
+        })
+        
     }
     
     func getIndex(for content: Content) -> Int {
