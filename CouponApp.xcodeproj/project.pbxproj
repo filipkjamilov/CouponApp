@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17A647F1290E7F12009078B6 /* CouponAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F0290E7F12009078B6 /* CouponAppApp.swift */; };
+		17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F0290E7F12009078B6 /* CouponApp.swift */; };
 		17A647F3290E7F12009078B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F2290E7F12009078B6 /* ContentView.swift */; };
 		17A647F5290E7F14009078B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A647F4290E7F14009078B6 /* Assets.xcassets */; };
 		17A647F9290E7F14009078B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A647F8290E7F14009078B6 /* Preview Assets.xcassets */; };
 		17A64803290E7F15009078B6 /* CouponAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64802290E7F15009078B6 /* CouponAppTests.swift */; };
 		17A6480D290E7F15009078B6 /* CouponAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6480C290E7F15009078B6 /* CouponAppUITests.swift */; };
 		17A6480F290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6480E290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift */; };
+		17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6481E290E8368009078B6 /* StorageKeys.swift */; };
+		17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */; };
+		17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64822290E83CE009078B6 /* TutorialScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		17A647ED290E7F12009078B6 /* CouponApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		17A647F0290E7F12009078B6 /* CouponAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppApp.swift; sourceTree = "<group>"; };
+		17A647F0290E7F12009078B6 /* CouponApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponApp.swift; sourceTree = "<group>"; };
 		17A647F2290E7F12009078B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17A647F4290E7F14009078B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A647F6290E7F14009078B6 /* CouponApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouponApp.entitlements; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		17A64808290E7F15009078B6 /* CouponAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6480C290E7F15009078B6 /* CouponAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppUITests.swift; sourceTree = "<group>"; };
 		17A6480E290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		17A6481E290E8368009078B6 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialWalkthrough.swift; sourceTree = "<group>"; };
+		17A64822290E83CE009078B6 /* TutorialScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,9 @@
 		17A647EF290E7F12009078B6 /* CouponApp */ = {
 			isa = PBXGroup;
 			children = (
-				17A647F0290E7F12009078B6 /* CouponAppApp.swift */,
+				17A6481C290E833F009078B6 /* Util */,
+				17A6481B290E8337009078B6 /* View */,
+				17A647F0290E7F12009078B6 /* CouponApp.swift */,
 				17A647F2290E7F12009078B6 /* ContentView.swift */,
 				17A647F4290E7F14009078B6 /* Assets.xcassets */,
 				17A647F6290E7F14009078B6 /* CouponApp.entitlements */,
@@ -127,6 +135,31 @@
 				17A6480E290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift */,
 			);
 			path = CouponAppUITests;
+			sourceTree = "<group>";
+		};
+		17A6481B290E8337009078B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17A6481D290E8353009078B6 /* tutorial */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17A6481C290E833F009078B6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				17A6481E290E8368009078B6 /* StorageKeys.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		17A6481D290E8353009078B6 /* tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */,
+				17A64822290E83CE009078B6 /* TutorialScreenView.swift */,
+			);
+			path = tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */,
+				17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */,
+				17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */,
 				17A647F3290E7F12009078B6 /* ContentView.swift in Sources */,
-				17A647F1290E7F12009078B6 /* CouponAppApp.swift in Sources */,
+				17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
