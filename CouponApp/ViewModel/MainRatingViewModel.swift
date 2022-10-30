@@ -14,7 +14,7 @@ public class MainRatingViewModel: ObservableObject {
     @AppStorage(StorageKeys.showPromoCode.rawValue) var showPromoCode = false
     @AppStorage(StorageKeys.endReached.rawValue) var endReached = false
     @AppStorage(StorageKeys.freshStart.rawValue) var freshStart = true
-    @AppStorage(StorageKeys.coupon.rawValue) var coupon = 0
+    @AppStorage(StorageKeys.coupon.rawValue) var coupon = ""
     @AppStorage(StorageKeys.start.rawValue) var start = 1
     @AppStorage(StorageKeys.limit.rawValue) var limit = 5
     
@@ -106,6 +106,8 @@ public class MainRatingViewModel: ObservableObject {
         UserDefaults.standard.reset()
         displayingContent = []
         ratedContent = []
+        showPromoCode = false
+        endReached = false
         
         // Fetch data
         fetchData()
@@ -113,7 +115,7 @@ public class MainRatingViewModel: ObservableObject {
     
     func retreiveCoupon() {
         // TODO: FKJ - API call that will send the `ratedContent` to backend and receive the coupon for the user.
-        coupon = Int.random(in: 379129832713..<99999999999999)
+        coupon = "111-222-333"
     }
     
 }
