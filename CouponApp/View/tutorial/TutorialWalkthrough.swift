@@ -11,15 +11,24 @@ struct TutorialWalkthrough: View {
         ZStack {
             
             if currentPage == 1 {
-                TutorialScreenView(image: "rebuy", title: "Title 1", description: "Description 1", bgColor: .cyan)
+                TutorialScreenView(image: "tutorial_page_1",
+                                   title: "You love the content?",
+                                   description: "Swipe left or use the heart button to rate the content!",
+                                   bgColor: .cyan)
             }
             
             if currentPage == 2 {
-                TutorialScreenView(image: "rebuy", title: "Title 2", description: "Description 2", bgColor: .pink)
+                TutorialScreenView(image: "tutorial_page_2",
+                                   title: "You don't like?",
+                                   description: "Swipe right or use the X mark button to rate the content!",
+                                   bgColor: .pink)
             }
             
             if currentPage == 3 {
-                TutorialScreenView(image: "rebuy", title: "Title 3", description: "Description 3", bgColor: .purple)
+                TutorialScreenView(image: "tutorial_page_3",
+                                   title: "Skip & Statistics",
+                                   description: "For skipping the content press the middle button, and for statistics press the top left button.",
+                                   bgColor: .purple)
             }
             
         }

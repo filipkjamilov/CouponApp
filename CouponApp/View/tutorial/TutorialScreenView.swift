@@ -16,15 +16,16 @@ struct TutorialScreenView: View {
             HStack {
                 if currentPage == 1 {
                     // Show it on first page
-                    Text("Hello Member!")
+                    Text("Welcome to CouponApp!")
                         .font(.title)
+                        .foregroundColor(.primary)
                         .fontWeight(.semibold)
                         .kerning(1.4)
                 } else {
                     // Back button
                     Button(action: { currentPage -= 1 }) {
                         Image(systemName: "chevron.left")
-                            .foregroundColor(.white)
+                            .foregroundColor(.primary)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(Color.black.opacity(0.4))
@@ -36,6 +37,7 @@ struct TutorialScreenView: View {
                 
                 Button(action: { currentPage = 4 }) {
                     Text("Skip")
+                        .foregroundColor(.primary)
                         .fontWeight(.semibold)
                         .kerning(1.2)
                 }
@@ -49,11 +51,11 @@ struct TutorialScreenView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
+                .cornerRadius(10)
             
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(.black)
                 .padding(.top)
             
             Text(description)

@@ -92,7 +92,6 @@ public class MainRatingViewModel: ObservableObject {
     }
 
     func saveRated(content: Content) {
-        // TODO: FKJ - Workaround to not save the image in UserDefaults.
         var rated = content
         rated.downloadedImage = Data()
         ratedContent.append(rated)
@@ -107,8 +106,7 @@ public class MainRatingViewModel: ObservableObject {
         UserDefaults.standard.reset()
         displayingContent = []
         ratedContent = []
-        showPromoCode = false
-        endReached = false
+        
         // Fetch data
         fetchData()
     }
