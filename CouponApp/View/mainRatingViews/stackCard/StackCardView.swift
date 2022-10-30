@@ -22,7 +22,8 @@ struct StackCardView: View {
             
             ZStack {
                 ZStack {
-                    // TODO: FKJ - ADD better background
+                    
+                    CardGradient()
                     
                     // Images can also be loaded via link with the help of AsyncImage
                     // This is much slower than fetching them from your database rather than a URL

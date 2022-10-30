@@ -14,7 +14,7 @@ struct ContentView: View {
             } else {
                 TutorialWalkthrough(totalPages: totalPages)
             }
-        }
+        }.background(BackgroundGradient())
     }
 }
 

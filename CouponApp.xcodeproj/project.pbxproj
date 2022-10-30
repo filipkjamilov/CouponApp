@@ -27,6 +27,8 @@
 		17A64839290E8D21009078B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A64838290E8D21009078B6 /* GoogleService-Info.plist */; };
 		17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483B290E8DB1009078B6 /* CouponView.swift */; };
 		17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483D290E8F95009078B6 /* ScratchView.swift */; };
+		17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64840290E90BC009078B6 /* BackgroundGradient.swift */; };
+		17A64843290E90E0009078B6 /* CardGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64842290E90E0009078B6 /* CardGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		17A64838290E8D21009078B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17A6483B290E8DB1009078B6 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
 		17A6483D290E8F95009078B6 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		17A64840290E90BC009078B6 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		17A64842290E90E0009078B6 /* CardGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		17A6481B290E8337009078B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17A6483F290E90A8009078B6 /* gradiens */,
 				17A6483A290E8DA1009078B6 /* couponView */,
 				17A64824290E886A009078B6 /* mainRatingViews */,
 				17A6481D290E8353009078B6 /* tutorial */,
@@ -227,6 +232,15 @@
 				17A6483D290E8F95009078B6 /* ScratchView.swift */,
 			);
 			path = couponView;
+			sourceTree = "<group>";
+		};
+		17A6483F290E90A8009078B6 /* gradiens */ = {
+			isa = PBXGroup;
+			children = (
+				17A64840290E90BC009078B6 /* BackgroundGradient.swift */,
+				17A64842290E90E0009078B6 /* CardGradient.swift */,
+			);
+			path = gradiens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,10 +387,12 @@
 				17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */,
 				17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */,
 				17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */,
+				17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */,
 				17A6482A290E88D7009078B6 /* MainRatingViewModel.swift in Sources */,
 				17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */,
 				17A64837290E8A8E009078B6 /* Content.swift in Sources */,
 				17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */,
+				17A64843290E90E0009078B6 /* CardGradient.swift in Sources */,
 				17A647F3290E7F12009078B6 /* ContentView.swift in Sources */,
 				17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */,
 			);
