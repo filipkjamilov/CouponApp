@@ -35,7 +35,7 @@ struct MainRatingView: View {
                 
                 if viewModel.showPromoCode {
                     
-                    // TODO: FKJ - ADD Coupon View
+                    CouponView(viewModel: viewModel)
                     
                 } else {
                     // Loading idicator for slow internet connection.
