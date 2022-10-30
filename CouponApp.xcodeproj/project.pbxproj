@@ -26,6 +26,7 @@
 		17A64837290E8A8E009078B6 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64836290E8A8E009078B6 /* Content.swift */; };
 		17A64839290E8D21009078B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A64838290E8D21009078B6 /* GoogleService-Info.plist */; };
 		17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483B290E8DB1009078B6 /* CouponView.swift */; };
+		17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483D290E8F95009078B6 /* ScratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		17A64836290E8A8E009078B6 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		17A64838290E8D21009078B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17A6483B290E8DB1009078B6 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
+		17A6483D290E8F95009078B6 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				17A6483B290E8DB1009078B6 /* CouponView.swift */,
+				17A6483D290E8F95009078B6 /* ScratchView.swift */,
 			);
 			path = couponView;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				17A64827290E8893009078B6 /* MainRatingView.swift in Sources */,
 				17A64834290E8A2C009078B6 /* StackCardView.swift in Sources */,
 				17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */,
+				17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */,
 				17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */,
 				17A6482A290E88D7009078B6 /* MainRatingViewModel.swift in Sources */,
 				17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */,

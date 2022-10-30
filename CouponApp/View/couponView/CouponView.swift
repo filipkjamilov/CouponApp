@@ -9,13 +9,38 @@ struct CouponView: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
-            
+
             VStack(spacing: 25) {
                 Text("Hooray!")
                     .font(.largeTitle)
-                
+
                 Text("You earned a discount coupon!")
+   
+                ScratchView(onFinish: $onFinish) {
+                    VStack {
+                        Text("Discount Code!")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
+                        
+                        Text("\(viewModel.coupon)")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.gray)
+                            .padding(.top, 5)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                } overlayView: {
+                    Image("discount")
+                        .resizable()
+                        .scaledToFit()
+                }
                 
+                Text("Scratch the image above to reveal the code!")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.center)
                 Button(action: {
                     viewModel.appReset()
                 }) {
@@ -27,20 +52,20 @@ struct CouponView: View {
                         .background(.secondary)
                         .clipShape(Capsule())
                 }
-                
+            
             }
             .shadow(color: Color(uiColor: UIColor.systemBackground),radius: 15)
             .padding(.vertical, 25)
             .padding(.horizontal, 30)
             .cornerRadius(25)
-            
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.primary.opacity(0.35))
         .cornerRadius(30)
-        
+
     }
-    
+
 }
 
 struct CouponView_Previews: PreviewProvider {
