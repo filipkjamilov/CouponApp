@@ -40,7 +40,7 @@ struct StackCardView: View {
                     
                     VStack {
                         Text(content.name)
-                            .font(.title)
+                            .font(.title2)
                         Image(uiImage: UIImage(data: content.downloadedImage) ?? UIImage(systemName: "x.square")!)
                             .resizable()
                             .scaledToFit()
