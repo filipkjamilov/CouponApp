@@ -29,9 +29,10 @@
 		17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483D290E8F95009078B6 /* ScratchView.swift */; };
 		17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64840290E90BC009078B6 /* BackgroundGradient.swift */; };
 		17A64843290E90E0009078B6 /* CardGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64842290E90E0009078B6 /* CardGradient.swift */; };
-		17A64846290E9167009078B6 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64845290E9167009078B6 /* UserDefaults+Extensions.swift */; };
 		17A64848290E9186009078B6 /* Published+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64847290E9186009078B6 /* Published+Extensions.swift */; };
 		17A6484B290E9415009078B6 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6484A290E9415009078B6 /* StatisticsView.swift */; };
+		17A64855290F124B009078B6 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64854290F124B009078B6 /* RemoteRepository.swift */; };
+		17A64859290F24A0009078B6 /* ContentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64858290F24A0009078B6 /* ContentDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +76,10 @@
 		17A6483D290E8F95009078B6 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 		17A64840290E90BC009078B6 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
 		17A64842290E90E0009078B6 /* CardGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradient.swift; sourceTree = "<group>"; };
-		17A64845290E9167009078B6 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		17A64847290E9186009078B6 /* Published+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Extensions.swift"; sourceTree = "<group>"; };
 		17A6484A290E9415009078B6 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		17A64854290F124B009078B6 /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
+		17A64858290F24A0009078B6 /* ContentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		17A647EF290E7F12009078B6 /* CouponApp */ = {
 			isa = PBXGroup;
 			children = (
+				17A64851290F1224009078B6 /* Repository */,
 				17A64844290E9157009078B6 /* Extensions */,
 				17A6481C290E833F009078B6 /* Util */,
 				17A64835290E8A75009078B6 /* Model */,
@@ -254,7 +257,6 @@
 		17A64844290E9157009078B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				17A64845290E9167009078B6 /* UserDefaults+Extensions.swift */,
 				17A64847290E9186009078B6 /* Published+Extensions.swift */,
 			);
 			path = Extensions;
@@ -266,6 +268,15 @@
 				17A6484A290E9415009078B6 /* StatisticsView.swift */,
 			);
 			path = statistics;
+			sourceTree = "<group>";
+		};
+		17A64851290F1224009078B6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				17A64854290F124B009078B6 /* RemoteRepository.swift */,
+				17A64858290F24A0009078B6 /* ContentDto.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,7 +424,6 @@
 				17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */,
 				17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */,
 				17A6484B290E9415009078B6 /* StatisticsView.swift in Sources */,
-				17A64846290E9167009078B6 /* UserDefaults+Extensions.swift in Sources */,
 				17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */,
 				17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */,
 				17A6482A290E88D7009078B6 /* MainRatingViewModel.swift in Sources */,
@@ -421,6 +431,8 @@
 				17A64837290E8A8E009078B6 /* Content.swift in Sources */,
 				17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */,
 				17A64843290E90E0009078B6 /* CardGradient.swift in Sources */,
+				17A64855290F124B009078B6 /* RemoteRepository.swift in Sources */,
+				17A64859290F24A0009078B6 /* ContentDto.swift in Sources */,
 				17A647F3290E7F12009078B6 /* ContentView.swift in Sources */,
 				17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */,
 			);
