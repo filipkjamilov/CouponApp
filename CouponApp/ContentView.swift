@@ -1,21 +1,20 @@
-//
-//  ContentView.swift
-//  CouponApp
-//
 //  Created by Filip Kjamilov on 30.10.22.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage(StorageKeys.currentPage.rawValue) var currentPage = 1
+    var totalPages = 3
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ZStack {
+            if currentPage > totalPages {
+                MainRatingView()
+            } else {
+                TutorialWalkthrough(totalPages: totalPages)
+            }
+        }.background(BackgroundGradient())
     }
 }
 

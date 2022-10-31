@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17A647F1290E7F12009078B6 /* CouponAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F0290E7F12009078B6 /* CouponAppApp.swift */; };
+		17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F0290E7F12009078B6 /* CouponApp.swift */; };
 		17A647F3290E7F12009078B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A647F2290E7F12009078B6 /* ContentView.swift */; };
 		17A647F5290E7F14009078B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A647F4290E7F14009078B6 /* Assets.xcassets */; };
 		17A647F9290E7F14009078B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A647F8290E7F14009078B6 /* Preview Assets.xcassets */; };
 		17A64803290E7F15009078B6 /* CouponAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64802290E7F15009078B6 /* CouponAppTests.swift */; };
 		17A6480D290E7F15009078B6 /* CouponAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6480C290E7F15009078B6 /* CouponAppUITests.swift */; };
 		17A6480F290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6480E290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift */; };
+		17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6481E290E8368009078B6 /* StorageKeys.swift */; };
+		17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */; };
+		17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64822290E83CE009078B6 /* TutorialScreenView.swift */; };
+		17A64827290E8893009078B6 /* MainRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64826290E8893009078B6 /* MainRatingView.swift */; };
+		17A6482A290E88D7009078B6 /* MainRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64829290E88D7009078B6 /* MainRatingViewModel.swift */; };
+		17A6482D290E897F009078B6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 17A6482C290E897F009078B6 /* FirebaseDatabase */; };
+		17A6482F290E897F009078B6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 17A6482E290E897F009078B6 /* FirebaseFirestore */; };
+		17A64831290E897F009078B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 17A64830290E897F009078B6 /* FirebaseStorage */; };
+		17A64834290E8A2C009078B6 /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64833290E8A2C009078B6 /* StackCardView.swift */; };
+		17A64837290E8A8E009078B6 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64836290E8A8E009078B6 /* Content.swift */; };
+		17A64839290E8D21009078B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A64838290E8D21009078B6 /* GoogleService-Info.plist */; };
+		17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483B290E8DB1009078B6 /* CouponView.swift */; };
+		17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6483D290E8F95009078B6 /* ScratchView.swift */; };
+		17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64840290E90BC009078B6 /* BackgroundGradient.swift */; };
+		17A64843290E90E0009078B6 /* CardGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64842290E90E0009078B6 /* CardGradient.swift */; };
+		17A64848290E9186009078B6 /* Published+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64847290E9186009078B6 /* Published+Extensions.swift */; };
+		17A6484B290E9415009078B6 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6484A290E9415009078B6 /* StatisticsView.swift */; };
+		17A64855290F124B009078B6 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64854290F124B009078B6 /* RemoteRepository.swift */; };
+		17A64859290F24A0009078B6 /* ContentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A64858290F24A0009078B6 /* ContentDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		17A647ED290E7F12009078B6 /* CouponApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		17A647F0290E7F12009078B6 /* CouponAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppApp.swift; sourceTree = "<group>"; };
+		17A647F0290E7F12009078B6 /* CouponApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponApp.swift; sourceTree = "<group>"; };
 		17A647F2290E7F12009078B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17A647F4290E7F14009078B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A647F6290E7F14009078B6 /* CouponApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouponApp.entitlements; sourceTree = "<group>"; };
@@ -45,6 +64,22 @@
 		17A64808290E7F15009078B6 /* CouponAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6480C290E7F15009078B6 /* CouponAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppUITests.swift; sourceTree = "<group>"; };
 		17A6480E290E7F15009078B6 /* CouponAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		17A6481E290E8368009078B6 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialWalkthrough.swift; sourceTree = "<group>"; };
+		17A64822290E83CE009078B6 /* TutorialScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScreenView.swift; sourceTree = "<group>"; };
+		17A64826290E8893009078B6 /* MainRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRatingView.swift; sourceTree = "<group>"; };
+		17A64829290E88D7009078B6 /* MainRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRatingViewModel.swift; sourceTree = "<group>"; };
+		17A64833290E8A2C009078B6 /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
+		17A64836290E8A8E009078B6 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		17A64838290E8D21009078B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17A6483B290E8DB1009078B6 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
+		17A6483D290E8F95009078B6 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		17A64840290E90BC009078B6 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		17A64842290E90E0009078B6 /* CardGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradient.swift; sourceTree = "<group>"; };
+		17A64847290E9186009078B6 /* Published+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Extensions.swift"; sourceTree = "<group>"; };
+		17A6484A290E9415009078B6 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		17A64854290F124B009078B6 /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
+		17A64858290F24A0009078B6 /* ContentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A6482D290E897F009078B6 /* FirebaseDatabase in Frameworks */,
+				17A6482F290E897F009078B6 /* FirebaseFirestore in Frameworks */,
+				17A64831290E897F009078B6 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +133,15 @@
 		17A647EF290E7F12009078B6 /* CouponApp */ = {
 			isa = PBXGroup;
 			children = (
-				17A647F0290E7F12009078B6 /* CouponAppApp.swift */,
+				17A64851290F1224009078B6 /* Repository */,
+				17A64844290E9157009078B6 /* Extensions */,
+				17A6481C290E833F009078B6 /* Util */,
+				17A64835290E8A75009078B6 /* Model */,
+				17A6481B290E8337009078B6 /* View */,
+				17A64828290E88BC009078B6 /* ViewModel */,
+				17A647F0290E7F12009078B6 /* CouponApp.swift */,
 				17A647F2290E7F12009078B6 /* ContentView.swift */,
+				17A64838290E8D21009078B6 /* GoogleService-Info.plist */,
 				17A647F4290E7F14009078B6 /* Assets.xcassets */,
 				17A647F6290E7F14009078B6 /* CouponApp.entitlements */,
 				17A647F7290E7F14009078B6 /* Preview Content */,
@@ -129,6 +174,111 @@
 			path = CouponAppUITests;
 			sourceTree = "<group>";
 		};
+		17A6481B290E8337009078B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17A64849290E93F6009078B6 /* statistics */,
+				17A6483F290E90A8009078B6 /* gradiens */,
+				17A6483A290E8DA1009078B6 /* couponView */,
+				17A64824290E886A009078B6 /* mainRatingViews */,
+				17A6481D290E8353009078B6 /* tutorial */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17A6481C290E833F009078B6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				17A6481E290E8368009078B6 /* StorageKeys.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		17A6481D290E8353009078B6 /* tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				17A64820290E83AC009078B6 /* TutorialWalkthrough.swift */,
+				17A64822290E83CE009078B6 /* TutorialScreenView.swift */,
+			);
+			path = tutorial;
+			sourceTree = "<group>";
+		};
+		17A64824290E886A009078B6 /* mainRatingViews */ = {
+			isa = PBXGroup;
+			children = (
+				17A64832290E8A17009078B6 /* stackCard */,
+				17A64826290E8893009078B6 /* MainRatingView.swift */,
+			);
+			path = mainRatingViews;
+			sourceTree = "<group>";
+		};
+		17A64828290E88BC009078B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17A64829290E88D7009078B6 /* MainRatingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17A64832290E8A17009078B6 /* stackCard */ = {
+			isa = PBXGroup;
+			children = (
+				17A64833290E8A2C009078B6 /* StackCardView.swift */,
+			);
+			path = stackCard;
+			sourceTree = "<group>";
+		};
+		17A64835290E8A75009078B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17A64836290E8A8E009078B6 /* Content.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17A6483A290E8DA1009078B6 /* couponView */ = {
+			isa = PBXGroup;
+			children = (
+				17A6483B290E8DB1009078B6 /* CouponView.swift */,
+				17A6483D290E8F95009078B6 /* ScratchView.swift */,
+			);
+			path = couponView;
+			sourceTree = "<group>";
+		};
+		17A6483F290E90A8009078B6 /* gradiens */ = {
+			isa = PBXGroup;
+			children = (
+				17A64840290E90BC009078B6 /* BackgroundGradient.swift */,
+				17A64842290E90E0009078B6 /* CardGradient.swift */,
+			);
+			path = gradiens;
+			sourceTree = "<group>";
+		};
+		17A64844290E9157009078B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17A64847290E9186009078B6 /* Published+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17A64849290E93F6009078B6 /* statistics */ = {
+			isa = PBXGroup;
+			children = (
+				17A6484A290E9415009078B6 /* StatisticsView.swift */,
+			);
+			path = statistics;
+			sourceTree = "<group>";
+		};
+		17A64851290F1224009078B6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				17A64854290F124B009078B6 /* RemoteRepository.swift */,
+				17A64858290F24A0009078B6 /* ContentDto.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +295,11 @@
 			dependencies = (
 			);
 			name = CouponApp;
+			packageProductDependencies = (
+				17A6482C290E897F009078B6 /* FirebaseDatabase */,
+				17A6482E290E897F009078B6 /* FirebaseFirestore */,
+				17A64830290E897F009078B6 /* FirebaseStorage */,
+			);
 			productName = CouponApp;
 			productReference = 17A647ED290E7F12009078B6 /* CouponApp.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +372,9 @@
 				Base,
 			);
 			mainGroup = 17A647E4290E7F11009078B6;
+			packageReferences = (
+				17A6482B290E897F009078B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 17A647EE290E7F12009078B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +393,7 @@
 			files = (
 				17A647F9290E7F14009078B6 /* Preview Assets.xcassets in Resources */,
 				17A647F5290E7F14009078B6 /* Assets.xcassets in Resources */,
+				17A64839290E8D21009078B6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +418,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A64848290E9186009078B6 /* Published+Extensions.swift in Sources */,
+				17A64827290E8893009078B6 /* MainRatingView.swift in Sources */,
+				17A64834290E8A2C009078B6 /* StackCardView.swift in Sources */,
+				17A6483C290E8DB1009078B6 /* CouponView.swift in Sources */,
+				17A6483E290E8F95009078B6 /* ScratchView.swift in Sources */,
+				17A6484B290E9415009078B6 /* StatisticsView.swift in Sources */,
+				17A64821290E83AC009078B6 /* TutorialWalkthrough.swift in Sources */,
+				17A64841290E90BC009078B6 /* BackgroundGradient.swift in Sources */,
+				17A6482A290E88D7009078B6 /* MainRatingViewModel.swift in Sources */,
+				17A6481F290E8368009078B6 /* StorageKeys.swift in Sources */,
+				17A64837290E8A8E009078B6 /* Content.swift in Sources */,
+				17A64823290E83CE009078B6 /* TutorialScreenView.swift in Sources */,
+				17A64843290E90E0009078B6 /* CardGradient.swift in Sources */,
+				17A64855290F124B009078B6 /* RemoteRepository.swift in Sources */,
+				17A64859290F24A0009078B6 /* ContentDto.swift in Sources */,
 				17A647F3290E7F12009078B6 /* ContentView.swift in Sources */,
-				17A647F1290E7F12009078B6 /* CouponAppApp.swift in Sources */,
+				17A647F1290E7F12009078B6 /* CouponApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,20 +601,22 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pilif.CouponApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,20 +641,22 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pilif.CouponApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -612,6 +790,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17A6482B290E897F009078B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17A6482C290E897F009078B6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17A6482B290E897F009078B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		17A6482E290E897F009078B6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17A6482B290E897F009078B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		17A64830290E897F009078B6 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17A6482B290E897F009078B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17A647E5290E7F11009078B6 /* Project object */;
 }
