@@ -17,26 +17,13 @@ struct StackCardView: View {
     var body: some View {
         GeometryReader { reader in
             let size = reader.size
-            let index = CGFloat(viewModel.getIndex(for: content))
+            let index = CGFloat(viewModel.getIndexFromDisplaying(content))
             let topOffset = (index <= 2 ? index : 2) * 15
             
             ZStack {
                 ZStack {
                     
                     CardGradient()
-                    
-                    // Images can also be loaded via link with the help of AsyncImage
-                    // This is much slower than fetching them from your database rather than a URL
-                    //                    AsyncImage(url: URL(string: content.link),
-                    //                               content: { image in
-                    //                        image.resizable()
-                    //                            .aspectRatio(contentMode: .fill)
-                    //                            .frame(width: size.width - topOffset, height: size.height)
-                    //                            .cornerRadius(15)
-                    //                            .offset(y: -topOffset)
-                    //                    }) {
-                    //                        ProgressView()
-                    //                    }
                     
                     VStack {
                         Text(content.name)
@@ -64,35 +51,39 @@ struct StackCardView: View {
         .gesture(
             DragGesture()
                 .updating($isDragging, body: { value, out, _ in
-                    out = true
+                    if viewModel.hasTimeElapsed {
+                        out = true
+                    }
                 })
                 .onChanged({ value in
-                    let translation = value.translation.width
-                    offset = (isDragging ? translation : .zero)
+                    if viewModel.hasTimeElapsed {
+                        let translation = value.translation.width
+                        offset = (isDragging ? translation : .zero)
+                    }
                 })
                 .onEnded({ value in
-                    
-                    let width = UIScreen.main.bounds.width - 50
-                    let translation = value.translation.width
-                    let checkingStatus = (translation > 0 ? translation : -translation)
-                    
-                    withAnimation {
-                        if checkingStatus > (width/2) {
-                            // Remove content from screen
-                            offset = (translation > 0 ? width : -width) * 2
-                            endSwipe = true
-                            endSwipeActions()
-                            
-                            if translation > 0 {
-                                rightSwipe()
+                    if viewModel.hasTimeElapsed {
+                        let width = UIScreen.main.bounds.width - 50
+                        let translation = value.translation.width
+                        let checkingStatus = (translation > 0 ? translation : -translation)
+                        
+                        withAnimation {
+                            if checkingStatus > (width/2) {
+                                // Remove content from screen
+                                offset = (translation > 0 ? width : -width) * 2
+                                endSwipe = true
+                                endSwipeActions()
+                                
+                                if translation > 0 {
+                                    rightSwipe()
+                                } else {
+                                    leftSwipe()
+                                }
                             } else {
-                                leftSwipe()
+                                offset = .zero
                             }
-                        } else {
-                            offset = .zero
                         }
                     }
-                    
                 })
         )
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("DOSWIPE"), object: nil)) { data in
@@ -117,36 +108,11 @@ struct StackCardView: View {
     }
     
     func rightSwipe() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            // Remove items from array
-            var contentToAppend = content
-            contentToAppend.rating = .disliked
-            viewModel.saveRated(content: contentToAppend)
-            if !(viewModel.displayingContent.isEmpty) {
-                viewModel.displayingContent.remove(at: viewModel.getIndex(for: content))
-            }
-            if viewModel.numDisplayed == 4 {
-                start = start + limit
-                viewModel.fetchData()
-            }
-        }
+        viewModel.rightSwipe(content: content)
     }
     
     func leftSwipe() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            // Remove items from array
-            var contentToAppend = content
-            contentToAppend.rating = .liked
-            viewModel.saveRated(content: contentToAppend)
-            if !(viewModel.displayingContent.isEmpty) {
-                viewModel.displayingContent.remove(at: viewModel.getIndex(for: content))
-            }
-            
-            if viewModel.numDisplayed == 4 {
-                start = start + limit
-                viewModel.fetchData()
-            }
-        }
+        viewModel.leftSwipe(content: content)
     }
     
     func rotation(angle: Double) -> Double {

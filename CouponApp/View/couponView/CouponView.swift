@@ -70,6 +70,6 @@ struct CouponView: View {
 
 struct CouponView_Previews: PreviewProvider {
     static var previews: some View {
-        CouponView(viewModel: MainRatingViewModel())
+        CouponView(viewModel: MainRatingViewModel(remoteRepo: RemoteRepository()))
     }
 }

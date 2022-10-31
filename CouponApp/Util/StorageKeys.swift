@@ -13,5 +13,6 @@ enum StorageKeys: String {
     case freshStart
     case displayingContent
     case ratedContent
+    case hasTimeElapsed
     
 }

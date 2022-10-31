@@ -45,7 +45,7 @@ public struct StatisticsView: View {
 
 struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
-        StatisticsView(viewModel: MainRatingViewModel())
+        StatisticsView(viewModel: MainRatingViewModel(remoteRepo: RemoteRepository()))
     }
 }
 

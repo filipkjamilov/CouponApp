@@ -4,7 +4,7 @@ import SwiftUI
 
 struct MainRatingView: View {
     
-    @StateObject var viewModel = MainRatingViewModel()
+    @StateObject var viewModel = MainRatingViewModel(remoteRepo: RemoteRepository())
     @State var showStatistics = false
     
     var body: some View {
@@ -47,18 +47,6 @@ struct MainRatingView: View {
                         }
                     }
                     
-                    // No more data in database!
-                    if viewModel.displayingContent.isEmpty && viewModel.endReached {
-                        VStack {
-                            Image(systemName: "square.3.layers.3d.down.left.slash")
-                                .resizable()
-                                .scaledToFit()
-                                .padding(.all, 100)
-                            Text("Upssss... There is no more content for you. Please come back later!")
-                                .font(.caption)
-                        }
-                    }
-                    
                     ForEach(viewModel.displayingContent.reversed(), id: \.id) { content in
                         StackCardView(content: content)
                             .environmentObject(viewModel)
@@ -78,6 +66,10 @@ struct MainRatingView: View {
                 
                 ProgressView("", value: Double(viewModel.ratedContent.count), total: 30)
                     .frame(width: 300)
+                
+                Text("Take your time while rating!")
+                    .foregroundColor(viewModel.hasTimeElapsed ? Color.clear : Color.primary)
+                    .font(.caption2)
                 
                 HStack(spacing: 15) {
                     Button(action: {
@@ -117,8 +109,8 @@ struct MainRatingView: View {
                     }
                 }
                 .padding(.bottom)
-                .disabled(viewModel.isContentEmpty || viewModel.showPromoCode)
-                .opacity((viewModel.isContentEmpty || viewModel.showPromoCode) ? 0.6 : 1)
+                .disabled(viewModel.isContentEmpty || viewModel.showPromoCode || !viewModel.hasTimeElapsed)
+                .opacity((viewModel.isContentEmpty || viewModel.showPromoCode || !viewModel.hasTimeElapsed) ? 0.6 : 1)
             }
             
         }
@@ -129,9 +121,9 @@ struct MainRatingView: View {
         guard let skipped = viewModel.displayingContent.first else { return }
         DispatchQueue.main.async {
             // Remove item from array
-            viewModel.displayingContent.remove(at: viewModel.getIndex(for: skipped))
+            viewModel.removeDisplayingContent(skipped)
             // Append item to back
-            viewModel.displayingContent.append(skipped)
+            viewModel.appendDisplayingContent(skipped)
         }
     }
     
